@@ -1,0 +1,34 @@
+.parent{
+    height: 200px;
+    width: 200px;
+    border: 1px solid black;
+    background-color: blue;
+    position: relative;
+}
+
+#child1{
+    position: static;
+}
+
+#child2{
+    position: absolute;
+    top: 0px; 
+    right:0px ;
+}
+#child3{
+    position: absolute;
+    bottom: 0px; 
+    left:0px ;
+}
+
+#child4{
+    position: absolute;
+    bottom: 0px; 
+    right:0px ;
+}
+#child5{
+    position: absolute;
+    top: 95px;
+    right: 95px;
+    left: 95px;
+}
