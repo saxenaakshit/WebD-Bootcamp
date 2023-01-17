@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper{
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    perspective: 10px;
+    
+}
+
+#container{ /*create container to fit images in it*/
+position: relative;/*to use absolute*/
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100%;
+z-index: -1;
+transform-style: preserve-3d;
+}
+
+#background{
+    transform: translateZ(-50px); /*make the image more distant from us*/
+    scale: 7; /*zoom the image by scaling the same*/
+}
+#foreground{
+    transform: translateZ(-20px); /*make the image more distant from us*/
+    scale: 4; /*zoom th eimage by scaling th esame*/
+}
+
+#foreground,#background{
+    position: absolute; /*change the position of the image with relative to the relative*/
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    object-fit: cover; /*cover the image on the screen*/ 
+}
