@@ -5,7 +5,7 @@
 }
 
 .wrapper{
-    height: 100vh;
+    height: 100vh; /*height of viewport*/
     overflow-x: hidden;
     overflow-y: auto;
     perspective: 10px;
@@ -36,5 +36,60 @@ transform-style: preserve-3d;
     z-index: -1;
     height: 100%;
     width: 100%;
-    object-fit: cover; /*cover the image on the screen*/ 
+    object-fit: cover; /*cover the image on the screen stretch in such a way*/ 
+}
+h1{
+    position: absolute;
+    top: 9rem;
+   font-size: 5rem;
+   letter-spacing: 4px;
+   color: white;
+   text-shadow: 0 0 10px rgba(0,0,0,10);
+
+
+}
+
+section{
+    background-color: rgb(45, 45, 45);
+    color: white;
+    padding: 5rem 0;
+}
+.secid{
+    font-size: 4rem;
+    padding: 0 10rem;
+}
+.text{
+    font-size: 1.5rem;
+    padding: 0 10rem;
+    
+
+}
+.desc{
+    position: absolute;
+    background-color: white;
+    padding: 0.5rem, 2.5rem;
+   top: 50%;
+   left: 50%;
+   transform: translateX(-50%);
+   color: black;
+   font-size: 3.5rem;
+}
+
+.bg{
+    position: relative;
+    width: 100%;
+    background-attachment: fixed;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+}
+
+.bg2{
+    background-image: url('sport-1.jpg');
+}
+.bg3{
+    background-image: url(sport-2.jpg);
+}
+.bg1{
+    background-image: url(sport-3.jpg);
 }
