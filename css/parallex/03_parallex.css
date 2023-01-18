@@ -93,3 +93,10 @@ section{
 .bg1{
     background-image: url(sport-3.jpg);
 }
+
+.sechead{
+    font-size: 70px;
+    padding: 0 10rem;
+    margin: 5rem 0;
+    color: wheat;
+}
