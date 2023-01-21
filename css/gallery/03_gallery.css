@@ -46,3 +46,9 @@
     box-shadow: 0 0 20px #333;
     object-fit: cover;
 }
+
+.card:hover{
+    transform: scale(1.06);
+    filter: drop-shadow(0 0 10px #333);
+    transition: 0.5s;
+}
