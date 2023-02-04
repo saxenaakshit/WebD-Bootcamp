@@ -12,12 +12,13 @@
 
 #wrapper{
     height: 100vh;
-    overflow-y: hidden;
-    overflow-x: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .container{
     width: 1200px;
+    /* to keep the whole thing in the center and margin from both the side as 0 */
     margin: 0 auto;
 }
 
@@ -30,12 +31,12 @@
 }
 
 .logo{
-    width: 75px;
+    width: 70px;
     bottom: 10px;
 }
 .navlogo{
     display: flex;
-    justify-content: center;
+    justify-content: baseline  ;
    align-items: center;
     
 }
@@ -70,3 +71,88 @@
     transition: 1s;
     
 }
+
+.hero-section{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 5rem;
+    margin: 4rem auto;
+    padding: 0 1rem;
+    padding-bottom: 8rem;
+}
+.faded-text{
+    user-select: none;
+    font-size: 7em;
+    color: rgb(231,231,231);
+
+    bottom: -16%;
+    left: -5%;
+    font-weight: bold;
+    transition: all 3s;
+
+}
+
+.hero-section-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.hero-section-heading{
+    font-size: 35px;
+    color: #343d68;
+    font-weight: 500;
+}
+
+.role{
+    color: #4e45d5;
+    font-weight: 800;
+}
+.hero-section-subheading{
+    font-size: 45px;
+    line-height: 45px;
+
+}
+
+.hero-section-description{
+   margin-top: 1rem;
+   width: 70%;
+    font-weight: 500;
+}
+
+.pink-btn{
+    background-color: #e84949;
+    padding: 0.8rem 2.8rem;
+    color: white;
+    font-size: 18px;
+    box-shadow: 5px 5px 7px 0px grey;
+    animation: forwards;
+    position: relative;
+    z-index: 1;
+
+}
+
+.pink-btn::before{
+content: "";
+background-color: #1f1f1f;
+position: absolute;
+top: 0;
+bottom: 0;
+right:0;
+left: 0;
+transform: scaleX(0);
+transition:all 1s;
+transform-origin: left;
+z-index:-1;
+
+
+}
+
+.pink-btn:hover::before{
+transform: scaleX(1);
+}
+
