@@ -364,7 +364,7 @@ transform: scaleX(1);
     margin-top: 4rem;
 }
 
-.project-header{
+.page-header{
     color: var(--bgOrange);
     font-size: 90px;
     text-align: center;
@@ -410,7 +410,7 @@ left: 0;
 bottom: 0;
 right: 0;
 background: linear-gradient(45deg , #343d68,#343d68be,#343d687c);
-transform: scale(0);
+transform: scaleX(0);
 transform-origin: left;
 transition: all 0.4s;
 z-index: 1;
@@ -419,3 +419,25 @@ z-index: 1;
 .project-card:hover::before{
     transform: scaleX(1);
 }
+
+.project-number{
+    color: white;
+    position: absolute;
+    font-size: 200px;
+    z-index: 10;
+
+}
+
+.project-number-right{
+
+    right: -40px;
+    top: -45px;
+}
+
+.project-number-right{
+
+    left: -40px;
+    top: -45px;
+}
+
+
