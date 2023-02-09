@@ -425,6 +425,7 @@ z-index: 1;
     position: absolute;
     font-size: 200px;
     z-index: 10;
+    display: none;
 
 }
 
@@ -469,4 +470,53 @@ z-index: 1;
 }
 .project-skill{
     width: 40px;
+}
+
+.project-subHeading{
+    width: 70%;
+    font-size: 16px;
+    font-style: italic;
+}
+.icon{
+    cursor: pointer;
+    color: white;
+    font-size: 35px;
+}
+
+.icon:hover{
+    color: #e84949;
+    transition :0.4s;
+}
+
+.project-card:hover .project-number{
+    display: block;
+    /* opacity can also be used */
+
+}
+
+.project-card:hover .project-content{
+    transform: scale(1.1);
+}
+
+#project1{
+    background-image: url(./images/projects/Project1.png);
+
+}
+#project2{
+    margin-left: 120px;
+    background-image: url(./images/projects/Project2.png);
+    
+}
+#project3{
+    background-image: url(./images/projects/Project3.png);
+    
+}
+#project4{
+    margin-left: 120px;
+    background-image: url(./images/projects/Project4.png);
+    
+}
+
+.project-card:hover .project-content{
+    transform: scale(1.1);
 }
