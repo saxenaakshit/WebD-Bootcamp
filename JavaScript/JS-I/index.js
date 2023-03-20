@@ -18,10 +18,13 @@ var h='harshit';
 //should be in camelCase
 //should not contain space, -
 
+//constants
+const g=78;
+g='hyderabad';
+
 
 
 //using objects
-
 let person={
     age:34,
     names:'akshit'
