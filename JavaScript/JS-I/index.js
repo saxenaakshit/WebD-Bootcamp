@@ -34,8 +34,23 @@ console.log(person.age);
 
 //using array
 //in the array of JS you can store multiple elements of multiple datatypes
-
 let namos=['rahul','aahil','babbar'];
+console.log(namos[2]);
+console.log(namos[9]);
+
+//Arithmetic operators
+// +,-,/,*
+//** -> used for calculating power
+
+//Pre and Post decrement and increment
+//a++ , ++a
+//a-- ,--a
+
+
+//Assignment operators
+//a+=5
+//== -> check if the value is equal (loose equality)
+//=== -> check if the value and the datatype both are equal (strict equality)
 
 
 
@@ -46,3 +61,8 @@ let namos=['rahul','aahil','babbar'];
 
 
 
+
+
+
+
+c
