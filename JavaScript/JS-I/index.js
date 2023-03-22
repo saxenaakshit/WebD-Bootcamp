@@ -54,6 +54,21 @@ console.log(namos[9]);
 
 
 
+// example->
+
+let str=1;
+let num='1';
+
+console.log(str==num)//return true
+console.log(str===num)//return false
+
+
+//ternery operator
+let age=17;
+let sta=(age>18)?'YES,Vote':'NO,Vote';
+console.log(sta);
+
+//Bitwise operators,if-else,for,while loop are same as c/c++
 
 
 
@@ -65,4 +80,3 @@ console.log(namos[9]);
 
 
 
-c
