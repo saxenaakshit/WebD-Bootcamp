@@ -34,7 +34,7 @@ let rectangeObj1=createRectangle();
 
 //creating with custom values
 function createRectangle(length,breadth){
-    let rectangle ={
+    return rectangle ={
         length:length, //or just length
         breadth: breadth, //or just breadth
         
@@ -50,7 +50,30 @@ let rectangleObj2=createRectangle(5,4);
 
 
 //2.Constructor function-->PascalNotation
- 
+//constructor function initalize or define the properties and methods
+function RectangleCre(len,bre){
+
+    this.length=len;
+    this.breadth=bre;
+
+    this.draw=function(){
+        console.loglog('drawing');
+    }
+}
+
+
+//creating the object
+let rectangleObject3=new RectangleCre(4,6);
+
+
+
+
+
+
+
+
+
+
 
 
 
