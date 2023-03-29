@@ -57,13 +57,23 @@ function RectangleCre(len,bre){
     this.breadth=bre;
 
     this.draw=function(){
-        console.loglog('drawing');
+        console.log('drawing');
     }
 }
 
 
 //creating the object
 let rectangleObject3=new RectangleCre(4,6);
+
+
+//dynamic nature of the variables
+//if you have forgotten creating an property you can add it later also
+RectangleCre.color='blue';
+
+delete RectangleCre.color;
+
+
+ 
 
 
 
