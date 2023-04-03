@@ -73,6 +73,61 @@ RectangleCre.color='blue';
 delete RectangleCre.color;
 
 
+
+//there ar two types of datatypes in JS
+
+//primitives or value types ->numbers,strings,boolean,undefined,null
+
+//reference types or objects --> functions,obejcts,array
+
+
+//in primitives(cppy is created)
+let a=10;
+let b=a;
+
+a++;
+
+//a--> 11
+//b--> 10
+
+//in reference(address is passed)
+let c={value: 10};
+let d=c.value;
+
+c.value++;
+
+//c.value --> 11
+//d.value --> 11
+
+
+let square={
+    side:5,
+    side2:7
+};
+
+
+//for-in loop
+for(let key in square){
+    //keys are reflected through key variable
+    console.log(key);
+     //values are reflected through square[key]
+     console.log(square[key])
+}
+
+//for-of loop
+for(let key of Object.entries(rectangle)){//or Object.keys
+    console.log(key)
+}
+
+
+
+
+
+
+
+
+
+
  
 
 
