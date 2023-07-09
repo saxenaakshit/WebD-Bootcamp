@@ -13,7 +13,7 @@ draw: function(){
  console.log("function is called")
 }
 
-}
+};
 
 //1.factory function-->camelCaseNotation
 function createRectangle(){
