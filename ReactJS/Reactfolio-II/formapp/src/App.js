@@ -23,19 +23,27 @@ function App() {
 
 //     setLastName(event.target.value);
 //   }
-const [formData, setFormData] = useState({firstName: "", lastName: "", email:"", comments:"",isVisible:true});
+const [formData, setFormData] = useState({firstname: "", lastname: "", email:"", comments:"",isVisible:true, mode:""});
 
  function changeHandler(event){
+  const {name, value, checked, type}= event.target
   setFormData(prevFormData =>{
+
     return {
       ...prevFormData,
-      [event.target.name]:event.target.value
+      [name]: type ==="checkbox" ? checked :value
     }
   });
  }
+
+ function submitHandler(event){
+  event.preventDefault();
+  console.log("Finally printing")
+  console.log(formData);
+ }
   return (
     <div className="App">
-      <form>
+      <form onSubmit={submitHandler}>
 
         <input 
         type='text'
@@ -84,6 +92,44 @@ checked={formData.isVisible}
 
 <label htmlFor='isVisible'>Am I visible ?</label>
 
+<fieldset>
+  <legend>Mode:</legend>
+  <input
+type='radio'
+onChange={changeHandler}
+name='mode'
+value ="Online-Mode"
+id="Online-Mode"
+/>
+
+<label htmlFor='Online-mode'>Online Mode</label>
+
+<input
+type='radio'
+onChange={changeHandler}
+name='mode'
+value ="Offline-Mode"
+id="Offline-Mode"
+/>
+
+<label htmlFor='Offline-mode'>Online Mode</label>
+</fieldset>
+
+<select
+name='favCar'
+id='favCar'
+value={formData.favCar}
+onChange={changeHandler}
+>
+  <option value="scarpio">Scarpio1</option>
+  <option value="scarpio">Scarpio2</option>
+  <option value="scarpio">Scarpio5</option>
+  <option value="scarpio">Scarpio7</option>
+  <option value="scarpio">Scarpio8</option>
+  <option value="scarpio">Scarpio9</option>
+</select>
+
+<button>Submit</button>
       </form>
     </div>
   );
