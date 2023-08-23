@@ -5,6 +5,7 @@ import Support from './components/Support';
 import About from './components/About';
 import Labs from './components/Labs';
 import NotFound from './components/NotFound';
+import { MainHeader } from "./components/MainHeader";
 
 function App() {
   return <div className="App">
@@ -29,11 +30,13 @@ function App() {
 
   </nav>
   <Routes>
-    <Route path="/" element={<Home></Home>}></Route>
+    <Route path="/" element={<MainHeader></MainHeader>}>
+    <Route index element={<Home/>} />
     <Route path="/support" element={<Support></Support>}></Route>
     <Route path="/about" element={<About></About>}></Route>
     <Route path="/labs" element={<Labs></Labs>}></Route>
     <Route path="*" element={<NotFound></NotFound>}></Route>
+    </Route>
   </Routes>
   
   
