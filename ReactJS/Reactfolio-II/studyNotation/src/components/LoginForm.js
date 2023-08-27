@@ -1,9 +1,7 @@
-import {React} from 'react'
-import {useState} from "react";
+import React, { useState } from 'react'
+import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
+import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-hot-toast';
-import {AiOutlineEye, AiOutlineEyeInvisible} from "react-icons/ai";
-import {Link} from "react-router-dom";
-import useNavigate from "react";
 
 
 
@@ -11,10 +9,12 @@ import useNavigate from "react";
 
 const LoginForm = ({setIsLoggedIn}) => {
 
+    const navigate = useNavigate();
+
 const [formData, setFormData]=useState({
     email:"", password: ""
 })
-const navigate =useNavigate();
+
 
 const [showPassword, setShowPassword]= useState(false);
 

@@ -2,7 +2,7 @@ import React from 'react'
 import {AiOutlineEye, AiOutlineEyeInvisible} from "react-icons/ai";
 import {useState} from "react";
 import {toast} from "react-hot-toast";
-import useNavigate from "react";
+import {useNavigate} from "react-router-dom";
 
 const SignupForm = (setIsLoggedIn) => {
 
@@ -30,15 +30,22 @@ const SignupForm = (setIsLoggedIn) => {
 
     function submitHandler(event) {
         event.preventDefault();
-        if(formData.password != formData.confirmPassword){
-            toast.error("Password do not match")
-            return;
+        if(formData.password !== formData.confirmPassword) {
+            toast.error("Passwords do not match");
+            return ;
         }
+
         setIsLoggedIn(true);
         toast.success("Account Created");
-        navigate("/dashboard")
-    }
+        const accountData = {
+            ...formData
+        };
+        console.log("printing account data ");
+        console.log(accountData);
 
+        navigate("/dashboard");
+
+    }
 
 
   return (
@@ -60,7 +67,7 @@ const SignupForm = (setIsLoggedIn) => {
                 <input
                     required
                     type='text'
-                    name='firstname'
+                    name='firstName'
                     onChange={changeHandler}
                     placeholder='Enter First Name'
                     value={formData.firstName}
@@ -72,7 +79,7 @@ const SignupForm = (setIsLoggedIn) => {
                 <input
                     required
                     type='text'
-                    name='lastname'
+                    name='lastName'
                     onChange={changeHandler}
                     placeholder='Enter Lastt Name'
                     value={formData.lastName}

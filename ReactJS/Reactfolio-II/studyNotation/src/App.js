@@ -17,13 +17,14 @@ const [isLoggedIn, setIsLoggedIn] =useState(false);
     <div>
       <Navbar isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}/>
 
-        <Routes>
+      <Routes>
 
-          <Route path="/" element= {<Home/>}/>
-          <Route path="login" element= {<Login setIsLoggedIn={setIsLoggedIn}/>}/>
-          <Route path="signup" element= {<Signup setIsLoggedIn={setIsLoggedIn}/>}/>
-          <Route path="dasboard" element= {<Dashboard/>}/>
-        </Routes>
+        <Route path="/" element= {<Home/>} />
+        <Route path="/login" element = {<Login  setIsLoggedIn={setIsLoggedIn} />} />
+        <Route path="/signup" element={<Signup  setIsLoggedIn={setIsLoggedIn} />} />
+        <Route path="/dashboard" element = {<Dashboard/>} />
+
+      </Routes>
     </div>
   )
 }
