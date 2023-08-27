@@ -1,7 +1,7 @@
 
 function Dashboard() {
   return (
-    <div className="flex flex-1 justify-center ">
+    <div className="flex h-full justify-center items-center text-white text-3xl">
       Welcome to Studynotion!
     </div>
   );
