@@ -12,8 +12,8 @@ export default function AppContextProvider({ children }) {
   // Fetch Blog Data
   const fetchBlogPosts = async (page = 1, tag=null,category) => {
     setLoading(true);
-    let url = `${baseUrl}get-blogs?page=${page}`;
-    if()
+    let url = `${baseUrl}?page=${page}`;
+    
     try {
       const res = await fetch(url);
       const data = await res.json();
