@@ -12,7 +12,7 @@ const removeFromCart = ()=>{
 }
 
   return (
-    <div>
+    <div >
       
       
       <div>
